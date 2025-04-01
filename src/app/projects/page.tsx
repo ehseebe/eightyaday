@@ -3,16 +3,12 @@ import { getProjects } from "@/lib/getProjects";
 import { paths } from "@/lib/utils";
 import Link from "next/link";
 
-export default function Home() {
+export default function Projects() {
   const projects = getProjects();
-  const featuredProjects = projects.filter((project) =>
-    project.data.category.includes("featured"),
-  );
 
   return (
     <main className="row-start-2 flex flex-col items-center gap-[32px] sm:items-start">
-      <p className="text-text">hello this is the homepage</p>
-      {featuredProjects.map((project) => (
+      {projects.map((project) => (
         <Link
           href={paths.projectDetail(project.slug)}
           passHref

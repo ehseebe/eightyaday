@@ -1,12 +1,21 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import { PROJECT_PATH } from "./constants";
+
+type Category =
+  | "featured"
+  | "illustration"
+  | "work"
+  | "comics"
+  | "politics"
+  | "kids";
 
 interface ProjectData {
   title: string;
   date?: string;
   description?: string;
-  category: string[]; // define category type
+  category: Category[];
   featuredImage?: string;
 }
 
@@ -16,10 +25,8 @@ interface Project {
   slug: string;
 }
 
-export const getWorkProjects = (): Project[] => {
-  const filePath = ["src", "app", "work"];
-
-  const dirFiles = fs.readdirSync(path.join(process.cwd(), ...filePath), {
+export const getProjects = (): Project[] => {
+  const dirFiles = fs.readdirSync(path.join(process.cwd(), ...PROJECT_PATH), {
     withFileTypes: true,
   });
 
@@ -27,7 +34,7 @@ export const getWorkProjects = (): Project[] => {
 
   const projects: Project[] = projectFiles.map((file) => {
     const fileContent = fs.readFileSync(
-      path.join(...filePath, file.name),
+      path.join(...PROJECT_PATH, file.name),
       "utf-8",
     );
 
@@ -35,7 +42,7 @@ export const getWorkProjects = (): Project[] => {
 
     const projectData: ProjectData = {
       title: data.title as string,
-      category: data.category as string[],
+      category: data.category as Category[],
       date: data.date as string | undefined,
       description: data.description as string | undefined,
       featuredImage: data.featuredImage as string | undefined,

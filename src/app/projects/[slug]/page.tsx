@@ -2,11 +2,10 @@ import fs from "fs";
 import path from "path";
 import { bundleMDX } from "mdx-bundler";
 import ClientMDX from "@/components/clientMdx";
-
-const workFilePath = ["src", "app", "work"];
+import { PROJECT_PATH } from "@/lib/constants";
 
 export async function generateStaticParams() {
-  const files = fs.readdirSync(path.join(process.cwd(), ...workFilePath));
+  const files = fs.readdirSync(path.join(process.cwd(), ...PROJECT_PATH));
 
   const paths = files.map((filename) => ({
     slug: filename.replace(".mdx", ""),
@@ -15,9 +14,9 @@ export async function generateStaticParams() {
   return paths;
 }
 
-async function getPost(slug: string) {
+async function getProject(slug: string) {
   const markdownFile = fs.readFileSync(
-    path.join(process.cwd(), ...workFilePath, slug + ".mdx"),
+    path.join(process.cwd(), ...PROJECT_PATH, slug + ".mdx"),
     "utf-8",
   );
 
@@ -38,12 +37,11 @@ interface Page {
 
 export default async function Page({ params }: Page) {
   const { slug } = await params;
-  const post = await getPost(slug);
+  const post = await getProject(slug);
 
   return (
-    <div>
-      <h1>{post.frontMatter.title}</h1>
+    <main className="row-start-2 flex flex-col items-center gap-[32px] sm:items-start">
       <ClientMDX code={post.code} />
-    </div>
+    </main>
   );
 }

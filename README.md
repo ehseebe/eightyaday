@@ -1,4 +1,4 @@
-# eightyday
+# eightyaday
 
 Portfolio website for eightyaday
 
