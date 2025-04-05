@@ -19,7 +19,7 @@ interface ProjectData {
   featuredImage?: string;
 }
 
-interface Project {
+export interface Project {
   data: ProjectData;
   content: string;
   slug: string;

@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <main className="row-start-2 flex max-w-[800px] flex-col items-center gap-[32px] sm:items-start">
+    <main className="row-start-2 flex max-w-(--max-content) flex-col items-center gap-[32px] sm:items-start">
       <p className="text-text">
         Hey there! I’m an illustrator based in Montreal, and I’m all about
         creating colourful, fun art that tells a story. Not too long ago, I made

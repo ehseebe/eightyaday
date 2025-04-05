@@ -24,6 +24,9 @@
   --reverse-box-shadow-y: -4px;
 
   --shadow: var(--box-shadow-x) var(--box-shadow-y) 0px 0px var(--border);
+
+  --max-layout: 1100px;
+  --max-content: 800px
 }
 
 .dark {
@@ -58,6 +61,7 @@
   --spacing-reverseBoxShadowY: var(--reverse-box-shadow-y);
 
   --radius-base: var(--border-radius);
+  --popover-width: var(--radix-popover-content-available-width);
 
   --shadow-shadow: var(--shadow);
 
@@ -69,6 +73,7 @@
   --animate-marquee: marquee 5s linear infinite;
   --animate-marquee2: marquee2 5s linear infinite;
   --animate-caret-blink: caret-blink 1.25s ease-out infinite;
+  --animate-in: slide-down 250ms;
 
   @keyframes accordion-down {
     from {
@@ -115,6 +120,17 @@
     20%,
     50% {
       opacity: 0;
+    }
+  }
+  
+  @keyframes slide-down {
+    from {
+      opacity: 0;
+      transform: translateY(-2px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
 }
