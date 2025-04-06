@@ -5,16 +5,26 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --bg: #dfe5f2;
-  --bw: #fff;
-  --blank: #000;
-  --border: #000;
-  --text: #000;
-  --mtext: #000;
-  --ring: #000;
-  --ring-offset: #fff;
+  --blue: #7088B8;
+  --light-blue: #8EB2D1;
+  --pink: #CF80A9;
+  --purple: #C0A7D2;
+  --yellow: #DDCD74;
+  --green: #96B04B;
+  --white: #FAF5F3;
+  --black: #212121;
 
-  --main: #88aaee;
+
+  --bg: var(--white);
+  --bw: var(--white);
+  --blank: var(--black);
+  --border: var(--black);
+  --text: var(--black);
+  --mtext: var(--black);
+  --ring: var(--black);
+  --ring-offset: var(--white);
+
+  --main: var(--light-blue);
   --overlay: rgba(0, 0, 0, 0.8);
 
   --border-radius: 5px;
@@ -30,20 +40,20 @@
 }
 
 .dark {
-  --bg: #272933;
-  --bw: #212121;
-  --blank: #fff;
-  --border: #fff;
-  --text: #e6e6e6;
-  --mtext: #e6e6e6;
-  --ring: #fff;
-  --ring-offset: #fff;
+  --bg: var(--black);
+  --bw: var(--black);
+  --blank: var(--white);
+  --border: var(--white);
+  --text: var(--white);
+  --mtext: var(--white);
+  --ring: var(--white);
+  --ring-offset: var(--white);
 
   --shadow: var(--box-shadow-x) var(--box-shadow-y) 0px 0px var(--border);
 }
 
 @theme inline {
-  --color-secondaryBlack: #212121;
+  --color-secondaryBlack: var(--black);
   --color-overlay: var(--overlay);
   --color-main: var(--main);
   --color-bg: var(--bg);

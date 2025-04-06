@@ -36,7 +36,7 @@ export default async function RootLayout({
           defaultTheme="light"
           disableTransitionOnChange
         >
-          <div className="dark:bg-secondaryBlack grid min-h-screen grid-rows-[88px_1fr_20px] items-center justify-items-center bg-white p-5 font-[family-name:var(--font-geist-sans)]">
+          <div className="dark:bg-secondaryBlack grid min-h-screen grid-rows-[88px_1fr_20px] items-center justify-items-center bg-(--bg) p-5 font-[family-name:var(--font-geist-sans)]">
             <Navigation />
 
             {children}

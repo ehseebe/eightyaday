@@ -3,13 +3,13 @@ import path from "path";
 import matter from "gray-matter";
 import { PROJECT_PATH } from "./constants";
 
-type Category =
-  | "featured"
-  | "illustration"
-  | "work"
-  | "comics"
-  | "politics"
-  | "kids";
+export type Category =
+  | "featured" // pink
+  | "illustration" // light blue
+  | "work" // blue
+  | "comics" // yellow
+  | "politics" // purple
+  | "kids"; //green
 
 interface ProjectData {
   title: string;

@@ -1,11 +1,12 @@
 "use client";
 import Link from "next/link";
-import { cn, paths } from "@/lib/utils";
+import { paths } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
 import { ModeToggle } from "./modeToggle";
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 import { useState } from "react";
+import Image from "next/image";
 
 export function Navigation() {
   const [open, setOpen] = useState(false);
@@ -14,31 +15,53 @@ export function Navigation() {
       <>
         <li className="w-full md:w-auto">
           <Button asChild className="w-full md:w-auto">
-            <Link href={paths.projects()}>projects</Link>
+            <Link href={paths.projects()} onClick={() => setOpen(false)}>
+              projects
+            </Link>
           </Button>
         </li>
         <li className="w-full md:w-auto">
           <Button asChild className="w-full md:w-auto">
-            <Link href={paths.about()}>about</Link>
+            <Link href={paths.shop()} onClick={() => setOpen(false)}>
+              shop
+            </Link>
           </Button>
         </li>
         <li className="w-full md:w-auto">
           <Button asChild className="w-full md:w-auto">
-            <Link href={paths.contact()}>contact</Link>
+            <Link href={paths.about()} onClick={() => setOpen(false)}>
+              about
+            </Link>
+          </Button>
+        </li>
+        <li className="w-full md:w-auto">
+          <Button asChild className="w-full md:w-auto">
+            <Link href={paths.contact()} onClick={() => setOpen(false)}>
+              contact
+            </Link>
           </Button>
         </li>
         <li>
-          <ModeToggle />
+          <ModeToggle onClick={() => setOpen(false)} />
         </li>
       </>
     );
   };
 
   return (
-    <nav className="border-border dark:border-darkNavBorder dark:bg-secondaryBlack fixed top-0 left-0 z-20 flex h-[88px] w-full justify-center border-b-4 bg-white px-5">
-      <ul className="dark:text-darkText text-text flex w-full max-w-(--max-layout) items-center justify-between">
+    <nav className="border-border dark:border-darkNavBorder dark:bg-secondaryBlack fixed top-0 left-0 z-20 flex h-[88px] w-full justify-center border-b-2 bg-(--bg) px-5">
+      <ul className="dark:text-darkText text-text relative flex w-full max-w-(--max-layout) items-center justify-between">
         <li>
-          <Link href={paths.home()}>eightyaday</Link>
+          <Link href={paths.home()}>
+            <Image
+              src="https://eightyaday.s3.ca-central-1.amazonaws.com/logo.png"
+              height={125}
+              width={125}
+              alt="Logo for artist eightyaday, cartoon style illustration of a surly raccoon with his arms crossed"
+              aria-label="Go to homepage"
+              className="mt-5 -ml-3"
+            />
+          </Link>
         </li>
         <div className="hidden w-full items-center justify-end gap-5 md:flex">
           {renderNavListItems()}

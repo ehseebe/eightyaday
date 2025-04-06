@@ -16,8 +16,10 @@ export default function ImageCard({ imageUrl, caption }: Props) {
         fill={false}
         alt="image"
       />
-      <figcaption className="text-text border-border dark:border-darkBorder border-t-2 p-4">
-        {caption}
+      <figcaption className="text-bold border-border dark:border-darkBorder border-t-2 p-4">
+        <p className="line-clamp-1 overflow-hidden overflow-ellipsis lowercase">
+          {caption}
+        </p>
       </figcaption>
     </figure>
   );

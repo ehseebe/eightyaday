@@ -4,20 +4,47 @@ import { useMemo } from "react";
 import { getMDXComponent } from "mdx-bundler/client";
 import type { MDXComponents } from "mdx/types";
 import Image, { ImageProps } from "next/image";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "./ui/card";
+import { CategoryBadges } from "./categoryBadges";
 
 const components: MDXComponents = {
-  h1: ({ children }) => (
-    <h1 style={{ color: "red", fontSize: "48px" }}>{children}</h1>
-  ),
-  img: (props) => (
-    <Image
-      sizes="100vw"
-      style={{ width: "100%", height: "auto" }}
-      width={400}
-      height={400}
-      {...(props as ImageProps)}
-    />
-  ),
+  blockquote: ({ children }) => {
+    const title = children[1];
+    const categories = children[3];
+    const categoryLabels = categories?.props.children.split(",");
+    const content = children[5];
+
+    return (
+      <Card>
+        <CardHeader>
+          <CardTitle>{title}</CardTitle>
+          <CardDescription>
+            <CategoryBadges categories={categoryLabels} />
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <CardDescription>{content}</CardDescription>
+        </CardContent>
+      </Card>
+    );
+  },
+  img: (props) => {
+    return (
+      <Image
+        sizes="100vw"
+        style={{ width: "100%", height: "auto" }}
+        width={400}
+        height={400}
+        {...(props as ImageProps)}
+      />
+    );
+  },
 };
 
 export default function ClientMDX({ code }: { code: string }) {

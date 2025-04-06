@@ -21,4 +21,7 @@ export const paths = {
   projects(query?: string) {
     return `/projects${query ? `?${query}` : ""}`;
   },
+  shop() {
+    return "/";
+  },
 };
