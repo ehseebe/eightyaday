@@ -24,4 +24,10 @@ export const paths = {
   shop() {
     return "/";
   },
+  instagram() {
+    return "https://www.instagram.com/eightyaday/";
+  },
+  email() {
+    return "mailto:eightyaday@gmail.com";
+  },
 };

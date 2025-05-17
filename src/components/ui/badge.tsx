@@ -17,6 +17,9 @@ const badgeVariants = cva(
         comics: "bg-(--yellow)",
         politics: "bg-(--purple)",
         kids: "bg-(--green)",
+        mural: "bg-(--purple)",
+        tactile: "bg-(--yellow)",
+        print: "bg-(--green)",
       },
     },
     defaultVariants: {
