@@ -22,7 +22,12 @@ export function Navigation() {
         </li>
         <li className="w-full md:w-auto">
           <Button asChild className="w-full md:w-auto">
-            <Link href={paths.shop()} onClick={() => setOpen(false)}>
+            <Link
+              href={paths.shop()}
+              onClick={() => setOpen(false)}
+              target="_blank"
+            >
+              <span className="hidden">Opens in new tab</span>
               shop
             </Link>
           </Button>
@@ -49,8 +54,8 @@ export function Navigation() {
   };
 
   return (
-    <nav className="border-border dark:border-darkNavBorder dark:bg-secondaryBlack fixed top-0 left-0 z-20 flex h-[88px] w-full justify-center border-b-2 bg-(--bg) px-5">
-      <ul className="dark:text-darkText text-text relative flex w-full max-w-(--max-layout) items-center justify-between">
+    <nav className="border-border dark:border-darkNavBorder dark:bg-secondaryBlack fixed top-0 left-0 z-20 flex h-[88px] w-full justify-center border-b-2 bg-(--bg)">
+      <ul className="dark:text-darkText text-text relative flex w-full max-w-(--max-layout) items-center justify-between px-5">
         <li>
           <Link href={paths.home()}>
             <Image

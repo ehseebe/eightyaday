@@ -5,14 +5,22 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --blue: #7088B8;
-  --light-blue: #8EB2D1;
-  --pink: #CF80A9;
-  --purple: #C0A7D2;
-  --yellow: #DDCD74;
-  --green: #96B04B;
   --white: #FAF5F3;
   --black: #212121;
+
+  --light-regular-blue: #7088B8;
+  --light-light-blue: #8EB2D1;
+  --light-pink: #CF80A9;
+  --light-purple: #C0A7D2;
+  --light-yellow: #DDCD74;
+  --light-green: #96B04B;
+
+  --dark-regular-blue: #5D7199;
+  --dark-light-blue: #53687B;
+  --dark-pink: #764960;
+  --dark-purple: #71637C;
+  --dark-yellow: #6D6538;
+  --dark-green: #4D5A27;
 
 
   --bg: var(--white);
@@ -26,6 +34,13 @@
 
   --main: var(--light-blue);
   --overlay: rgba(0, 0, 0, 0.8);
+
+  --blue: var(--light-regular-blue);
+  --light-blue: var(--light-light-blue);
+  --pink: var(--light-pink);
+  --purple: var(--light-purple);
+  --yellow: var(--light-yellow);
+  --green: var(--light-green);
 
   --border-radius: 5px;
   --box-shadow-x: 4px;
@@ -48,6 +63,14 @@
   --mtext: var(--white);
   --ring: var(--white);
   --ring-offset: var(--white);
+  --main: var(--dark-light-blue);
+
+  --blue: var(--dark-regular-blue);
+  --light-blue: var(--dark-light-blue);
+  --pink: var(--dark-pink);
+  --purple: var(--dark-purple);
+  --yellow: var(--dark-yellow);
+  --green: var(--dark-green);
 
   --shadow: var(--box-shadow-x) var(--box-shadow-y) 0px 0px var(--border);
 }

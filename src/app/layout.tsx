@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/themeProvider";
 import { Navigation } from "@/components/navigation";
+import { Footer } from "@/components/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,11 +37,12 @@ export default async function RootLayout({
           defaultTheme="light"
           disableTransitionOnChange
         >
-          <div className="dark:bg-secondaryBlack grid min-h-screen grid-rows-[88px_1fr_20px] items-center justify-items-center bg-(--bg) p-5 font-[family-name:var(--font-geist-sans)]">
+          <div className="dark:bg-secondaryBlack min-h-screen items-center justify-items-center bg-(--bg) pt-[88px] font-[family-name:var(--font-geist-sans)]">
             <Navigation />
 
             {children}
-            <footer className="row-start-3 flex flex-wrap items-center justify-center gap-[24px]"></footer>
+
+            <Footer />
           </div>
         </ThemeProvider>
       </body>

@@ -5,12 +5,13 @@ import Link from "next/link";
 
 export function FeaturedGrid({ projects }: { projects: Project[] }) {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+    <div className="grid grid-cols-1 gap-[4px] sm:grid-cols-2 md:grid-cols-3">
       {projects.map((project) => (
         <Link
           href={paths.projectDetail(project.slug)}
           key={project.slug}
           aria-label={`Learn more about ${project.data.title}`}
+          className="rounded-base overflow-hidden"
         >
           <Image
             src={project.data.featuredImage || ""}

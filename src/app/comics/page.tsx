@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
-export default function Contact() {
+export default function Comics() {
   return (
     <main className="flex min-h-[90vh] max-w-(--max-content) flex-col items-center justify-center gap-[32px] px-5 py-6">
       <Image
@@ -22,15 +22,11 @@ export default function Contact() {
         <CardContent>
           <div className="flex w-full flex-col gap-5 md:w-auto">
             <Button asChild className="w-full md:w-auto">
-              <Link href={paths.email()}>
-                <span className="hidden">Opens email application</span>
-                send me an email
-              </Link>
+              <Link href={paths.email()}>send me an email</Link>
             </Button>
 
             <Button asChild className="w-full md:w-auto">
               <Link href={paths.instagram()} target="_blank">
-                <span className="hidden">Opens in new tab</span>
                 dm me on instagram
               </Link>
             </Button>

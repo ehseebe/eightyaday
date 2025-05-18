@@ -21,17 +21,19 @@ const components: MDXComponents = {
     const content = children[5];
 
     return (
-      <Card>
-        <CardHeader>
-          <CardTitle>{title}</CardTitle>
-          <CardDescription>
-            <CategoryBadges categories={categoryLabels} />
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          <CardDescription>{content}</CardDescription>
-        </CardContent>
-      </Card>
+      <section>
+        <Card>
+          <CardHeader>
+            <CardTitle>{title}</CardTitle>
+            <CardDescription>
+              <CategoryBadges categories={categoryLabels} />
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <CardDescription>{content}</CardDescription>
+          </CardContent>
+        </Card>
+      </section>
     );
   },
   img: (props) => {

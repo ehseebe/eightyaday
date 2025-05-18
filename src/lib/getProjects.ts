@@ -7,12 +7,11 @@ export type Category =
   | "featured" // pink
   | "illustration" // light blue
   | "work" // blue
-  | "comics" // yellow
   | "politics" // purple
   | "kids" //green
-  | "mural" // white
-  | "tactile"
-  | "print";
+  | "mural" // purple
+  | "tactile" // yellow
+  | "print"; //green
 
 interface ProjectData {
   title: string;
