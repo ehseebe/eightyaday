@@ -5,7 +5,7 @@ export function ImageWithPlaceholder(props: ImageProps) {
   return (
     <Image
       placeholder="blur"
-      blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mPs23SxHgAGeQKSo4nawAAAAABJRU5ErkJggg=="
+      blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mO8e+NaPQAIMQMMyxnCsAAAAABJRU5ErkJggg=="
       {...props}
       alt={props.alt || ""}
     />

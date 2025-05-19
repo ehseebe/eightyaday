@@ -6,7 +6,7 @@ import { Button } from "./ui/button";
 import { ModeToggle } from "./modeToggle";
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 import { useState } from "react";
-import Image from "next/image";
+import { ImageWithPlaceholder } from "./imageWithPlaceholder";
 
 export function Navigation() {
   const [open, setOpen] = useState(false);
@@ -58,7 +58,7 @@ export function Navigation() {
       <ul className="dark:text-darkText text-text relative flex w-full max-w-(--max-layout) items-center justify-between px-5">
         <li>
           <Link href={paths.home()}>
-            <Image
+            <ImageWithPlaceholder
               src="https://eightyaday.s3.ca-central-1.amazonaws.com/logo.png"
               height={125}
               width={125}

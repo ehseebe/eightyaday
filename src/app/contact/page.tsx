@@ -11,7 +11,6 @@ export default function Contact() {
         src="https://eightyaday.s3.ca-central-1.amazonaws.com/contact.jpg"
         height={400}
         width={400}
-        style={{ width: "100%", height: "auto" }}
         alt="Portrait of me holding cotton candy, standing in front of a ferris wheel at a local fair."
       />
       <Card className="w-full max-w-[400px]">
