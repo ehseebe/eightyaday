@@ -6,7 +6,7 @@ import { ImageWithPlaceholder } from "@/components/imageWithPlaceholder";
 
 export default function Contact() {
   return (
-    <main className="flex min-h-[90vh] max-w-(--max-content) flex-col items-center justify-center gap-[32px] px-5 py-6">
+    <main className="flex min-h-[90vh] max-w-(--max-content) flex-col gap-[32px] px-5 py-6 md:items-center md:justify-center">
       <ImageWithPlaceholder
         src="https://eightyaday.s3.ca-central-1.amazonaws.com/contact.jpg"
         height={400}

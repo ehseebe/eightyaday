@@ -48,7 +48,7 @@ export default async function Page({ params }: Page) {
   const post = await getProject(slug);
 
   return (
-    <main className="flex min-h-[90vh] max-w-(--max-content) flex-col items-center justify-center gap-[32px] px-5 py-6">
+    <main className="flex min-h-[90vh] max-w-(--max-content) flex-col gap-[32px] px-5 py-6 md:items-center md:justify-center">
       <div className="flex max-w-(--max-content) flex-col gap-[24px]">
         <ClientMDX code={post.code} />
       </div>

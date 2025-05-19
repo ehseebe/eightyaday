@@ -75,7 +75,7 @@ export function Navigation() {
         <li className="justify-end md:hidden">
           <Popover open={open} onOpenChange={setOpen}>
             <PopoverTrigger asChild>
-              <Button size="icon" variant="noShadow">
+              <Button size="icon" variant="default">
                 {open ? <X size="100px" /> : <Menu size="100px" />}
               </Button>
             </PopoverTrigger>
