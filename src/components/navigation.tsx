@@ -65,6 +65,7 @@ export function Navigation() {
               alt="Logo for artist eightyaday, cartoon style illustration of a surly raccoon with his arms crossed"
               aria-label="Go to homepage"
               className="mt-5 -ml-3"
+              placeholder="empty"
             />
           </Link>
         </li>
