@@ -22,7 +22,7 @@ export const paths = {
     return `/projects${query ? `?${query}` : ""}`;
   },
   shop() {
-    return "https://eightyaday.com/";
+    return "https://shop.eightyaday.com/collections/all";
   },
   instagram() {
     return "https://www.instagram.com/eightyaday/";
