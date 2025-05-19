@@ -44,6 +44,7 @@ const components: MDXComponents = {
         width={400}
         height={400}
         {...(props as ImageProps)}
+        alt=""
       />
     );
   },

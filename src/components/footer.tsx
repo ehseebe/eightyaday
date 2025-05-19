@@ -6,7 +6,6 @@ import { paths } from "@/lib/utils";
 import { MailIcon, ShoppingBagIcon } from "lucide-react";
 
 export function Footer() {
-  const currentYear = new Date().getFullYear();
   return (
     <footer className="border-border dark:border-darkNavBorder dark:bg-secondaryBlack flex h-[88px] w-full justify-center bg-(--bg) px-5">
       <ul className="flex items-center justify-center gap-5">

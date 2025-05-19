@@ -8,10 +8,12 @@ export type Category =
   | "illustration" // light blue
   | "work" // blue
   | "politics" // purple
-  | "kids" //green
   | "mural" // purple
   | "tactile" // yellow
   | "print"; //green
+
+// Note: to be added later
+// | "kids" //green
 
 interface ProjectData {
   title: string;

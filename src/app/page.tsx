@@ -10,7 +10,7 @@ export default function Home() {
   );
 
   return (
-    <main className="flex min-h-[90vh] max-w-(--max-content) flex-col items-center justify-center gap-[32px] px-5 py-6">
+    <main className="flex min-h-[90vh] max-w-(--max-layout) flex-col items-center justify-center gap-[32px] px-5 py-6">
       <h1 className="sr-only">portfolio for artist eightyaday</h1>
       <Image
         src="https://eightyaday.s3.ca-central-1.amazonaws.com/splash.png"
