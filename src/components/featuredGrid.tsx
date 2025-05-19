@@ -1,7 +1,7 @@
 import { Project } from "@/lib/getProjects";
 import { paths } from "@/lib/utils";
-import Image from "next/image";
 import Link from "next/link";
+import { ImageWithPlaceholder } from "./imageWithPlaceholder";
 
 export function FeaturedGrid({ projects }: { projects: Project[] }) {
   return (
@@ -11,9 +11,9 @@ export function FeaturedGrid({ projects }: { projects: Project[] }) {
           href={paths.projectDetail(project.slug)}
           key={project.slug}
           aria-label={`Learn more about ${project.data.title}`}
-          className="rounded-base overflow-hidden"
+          className="rounded-base overflow-hidden transition duration-250 ease-in-out hover:scale-95 focus-visible:overflow-visible focus-visible:ring-3 focus-visible:ring-black focus-visible:ring-offset-3"
         >
-          <Image
+          <ImageWithPlaceholder
             src={project.data.featuredImage || ""}
             alt={`Featured image for ${project.data.title}`}
             height={400}

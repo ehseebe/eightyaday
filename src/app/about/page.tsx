@@ -1,3 +1,4 @@
+import { ImageWithPlaceholder } from "@/components/imageWithPlaceholder";
 import {
   Card,
   CardContent,
@@ -5,14 +6,13 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import Image from "next/image";
 import Link from "next/link";
 
 export default function About() {
   return (
     <main className="flex min-h-[90vh] max-w-(--max-content) flex-col items-center justify-center gap-[32px] px-5 py-6">
       <Card>
-        <Image
+        <ImageWithPlaceholder
           src="https://eightyaday.s3.ca-central-1.amazonaws.com/self_portrait_02.jpg"
           height={400}
           width={400}
@@ -32,11 +32,11 @@ export default function About() {
             </p>
             <p className="text-text text-center font-semibold">
               I love drawing everything from comics and animals to bugs and
-              bringing my illustrations to life with graphic design. I've had
-              the pleasure of working with some amazing clients like Lufa Farms,
-              Detroit Rapper Dopehead, Jean + Deans Bakery, CKCU FM Ottawa, and
-              more. Whether it&apos;s a logo, a mural, or a limited-edition tote
-              bag, I&apos;m here to make it happen.
+              bringing my illustrations to life with graphic design. I&apos;ve
+              had the pleasure of working with some amazing clients like Lufa
+              Farms, Detroit Rapper Dopehead, Jean + Deans Bakery, CKCU FM
+              Ottawa, and more. Whether it&apos;s a logo, a mural, or a
+              limited-edition tote bag, I&apos;m here to make it happen.
             </p>
             <p className="text-text text-center font-semibold">
               I&apos;ve showcased my personal art at exhibitions like the Sketch

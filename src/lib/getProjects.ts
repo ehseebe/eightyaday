@@ -7,7 +7,6 @@ export type Category =
   | "featured" // pink
   | "illustration" // light blue
   | "work" // blue
-  | "politics" // purple
   | "mural" // purple
   | "tactile" // yellow
   | "print"; //green

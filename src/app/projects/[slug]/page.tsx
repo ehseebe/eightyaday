@@ -5,10 +5,14 @@ import ClientMDX from "@/components/clientMdx";
 import { PROJECT_PATH } from "@/lib/constants";
 
 export async function generateStaticParams() {
-  const files = fs.readdirSync(path.join(process.cwd(), ...PROJECT_PATH));
+  const files = fs.readdirSync(path.join(process.cwd(), ...PROJECT_PATH), {
+    withFileTypes: true,
+  });
 
-  const paths = files.map((filename) => ({
-    slug: filename.replace(".mdx", ""),
+  const projectFiles = files.filter((file) => file.name.endsWith(".mdx"));
+
+  const paths = projectFiles.map((file) => ({
+    slug: file.name,
   }));
 
   return paths;
@@ -16,7 +20,11 @@ export async function generateStaticParams() {
 
 async function getProject(slug: string) {
   const markdownFile = fs.readFileSync(
-    path.join(process.cwd(), ...PROJECT_PATH, slug + ".mdx"),
+    path.join(
+      process.cwd(),
+      ...PROJECT_PATH,
+      slug.includes("mdx") ? slug : slug + ".mdx",
+    ),
     "utf-8",
   );
 

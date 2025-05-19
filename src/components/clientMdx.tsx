@@ -3,7 +3,7 @@
 import { useMemo } from "react";
 import { getMDXComponent } from "mdx-bundler/client";
 import type { MDXComponents } from "mdx/types";
-import Image, { ImageProps } from "next/image";
+import type { ImageProps } from "next/image";
 import {
   Card,
   CardContent,
@@ -12,6 +12,7 @@ import {
   CardTitle,
 } from "./ui/card";
 import { CategoryBadges } from "./categoryBadges";
+import { ImageWithPlaceholder } from "./imageWithPlaceholder";
 
 const components: MDXComponents = {
   blockquote: ({ children }) => {
@@ -38,7 +39,7 @@ const components: MDXComponents = {
   },
   img: (props) => {
     return (
-      <Image
+      <ImageWithPlaceholder
         sizes="100vw"
         style={{ width: "100%", height: "auto" }}
         width={400}

@@ -17,6 +17,7 @@ export default function Home() {
         height={400}
         width={1100}
         alt="Illustration of the name eightyaday in bubble letters of alternating lighter and darker pastel blues. The 'y' has a little pink and yellow rat chewing on it."
+        priority
       />
       <section>
         <FeaturedGrid projects={featuredProjects} />
